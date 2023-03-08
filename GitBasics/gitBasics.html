@@ -10,30 +10,7 @@
    <title>git Basics</title>
 </head>
 <body>
-    
-    <!-- <style>
-        div {
-            margin: 30px;
-        }
-
-        div div {
-            width: 50%;
-        }
-
-        @media (max-width: 800px) {
-            body {
-            }
-
-            div:nth-of-type(1) {
-                flex-direction: column;
-            }
-
-            div div {
-            }
-        }
-    </style> -->
-
-    <div id="div-1" style="display: flex; flex-direction: row;">
+    <div style="display: flex; flex-direction: row;">
     <div>
     <h1>Git Basics</h1>
     <p><b>Git</b> is a type of source control software. This program allows us to create folders and files, among other things, which we can use to build our web-pages, sites, applications, programs and more.</p>
@@ -62,16 +39,13 @@
     <p><i>(At this point, if you haven't already, you would go to your site of choice to host your repository (I will specify github for this example.) After creating your remote repository, you will need to type or copy code to send the local repository to the remote.)</i></p>
     <p><b>git remote add origin https://github.com/username/RepositoryName.git</b> - sets your remote repository as the origin which allows others to view/change it if desired. It essentially becomes the "root" of all repositories contributing to it</p>
     <p><b>git branch -M main</b> - Specifies your local root as "main"</p>
-    <p><b>git push -u origin main</b> - "Pushes," or sends, your local repository to the remote repository, adding any changes you have commited.</p>
+    <p><b>git push -u origin main</b> - "Pushes," or sends, your local repository to the remote repository, adding any changes you have committed.</p>
     <br>
     <p>Those are the basics of using git to create and push your repositories to a remote location. After you have initially set up your repository, you will not need to run those <b>last three lines</b> of code again, but you <b>will</b> need to type <b>git push</b> to send your commits to the remote repository.</p>
     </div>
     </div>
 
     <style>
-        body {
-        }
-
         div {
             margin: 5px 30px;
         }
@@ -94,9 +68,5 @@
             }
         }
     </style>
-
-
-
-
 </body>
 </html>
