@@ -86,9 +86,161 @@ a {
     scale: 1.1 1.1;
 }
 
+#cover {
+    /* width: 100%; */
+    width: 250px;
+    height: 20px;
+    background-color: #ff0000;
+    position: absolute;
+    text-align: center;
+    text-decoration: none;
+    top: 25px;
+    left: 800px;
+    z-index: 2;
+}
+
+#cover:not(:hover) {
+    z-index: 0;
+    transition-delay: ;
+}
+
+
+#bootstrap-menu {
+    width: 250px;
+    height: 150px;   
+    display: flex;
+    flex-direction: column;
+    background-color: #e8fafa;    
+    border: 2px solid #57a8a8;
+    border-radius: 5px;
+    text-align: center;
+
+}
+
+#bootstrap-menu:not(:hover) {
+    /* background-color: #497979; */
+    
+
+    position: absolute;
+    top: 25px;
+    left: 800px;
+    /* display: flex; */
+    transition: all 300ms ease-in;
+    transform: scaleY(.15);
+    z-index: 1;
+    /* overflow-y: hidden; */
+}
+
+#bootstrap-menu:hover {
+    /* translate: 0 250px; */
+    /* transform: scaleY(13.5); */
+    /* translate: 0 125px; */
+    position: absolute;
+    top: 25px;
+    left: 800px;
+    display: flex;
+    flex-direction: column;
+    /* background-color: #e8fafa;     */
+    /* border: 2px solid #57a8a8; */
+    /* border-radius: 5px; */
+    /* text-align: center; */
+    transition: all 300ms ease-out;
+    /* transform: scaleY(1);
+    z-index: 1;
+    overflow-y: visible; */
+
+}
+
+.no-transform {
+    transform: scaleY(.5);
+    align-self: flex-end;
+}
+
+.static-text {
+    transform: scaleY(8);
+}
+
+.static-text: {
+    opacity: 0;
+    z-index: 0;
+}
 
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* (A) TABS CONTAINER */
+.tab, .tab * {
+    font-family: arial, sans-serif;
+    box-sizing: border-box;
+  }
+  .tab { max-width: 600px; }
+  
+  /* (B) HIDE CHECKBOX */
+  .tab input { display: none; }
+  
+  /* (C) TAB LABEL */
+  .tab label {
+    /* (C1) DIMENSIONS */
+    position: relative; /* required for (f2) position:absolute */
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+   
+    /* (C2) COSMETICS */
+    font-weight: 700;
+    color: #fff;
+    background: #2d5faf;
+    cursor: pointer;
+  }
+  
+  /* (D) TAB CONTENT - HIDDEN BY DEFAULT */
+  /* css animation will not work with auto height */
+  /* this is why we use max-height instead */
+  .tab .content {
+    background: #ccdef9;
+    overflow: hidden;
+    transition: max-height 0.3s;
+    max-height: 0;
+  }
+  .tab .content p { padding: 10px; }
+  
+  /* (E) OPEN TAB ON CHECKED */
+  .tab input:checked ~ .content { max-height: 100vh; }
+  
+  /* (F) EXTRA - ADD ARROW INDICATOR */
+  .tab label::after {
+    /* (F1) RIGHT ARROW */
+    display: block;  
+    content: "\25b6";
+   
+    /* (F2) PLACE AT RIGHT SIDE */
+    position: absolute;
+    right: 10px; top: 10px;
+   
+    /* (F3) ANIMATED ARROW */
+    transition: all 0.4s;
+  }
+   
+  /* (F4) ROTATE ARROW ON CHECKED */
+  .tab input:checked ~ label::after { transform: rotate(90deg); }
