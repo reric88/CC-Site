@@ -101,7 +101,6 @@ a {
 
 #cover:not(:hover) {
     z-index: 0;
-    transition-delay: ;
 }
 
 
@@ -160,87 +159,66 @@ a {
     transform: scaleY(8);
 }
 
-.static-text: {
+.static-text {
     opacity: 0;
     z-index: 0;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* (A) TABS CONTAINER */
-.tab, .tab * {
-    font-family: arial, sans-serif;
-    box-sizing: border-box;
-  }
-  .tab { max-width: 600px; }
-  
-  /* (B) HIDE CHECKBOX */
-  .tab input { display: none; }
-  
-  /* (C) TAB LABEL */
-  .tab label {
-    /* (C1) DIMENSIONS */
-    position: relative; /* required for (f2) position:absolute */
-    display: block;
-    width: 100%;
-    margin-top: 10px;
-    padding: 10px;
-   
-    /* (C2) COSMETICS */
-    font-weight: 700;
-    color: #fff;
-    background: #2d5faf;
-    cursor: pointer;
-  }
-  
-  /* (D) TAB CONTENT - HIDDEN BY DEFAULT */
-  /* css animation will not work with auto height */
-  /* this is why we use max-height instead */
-  .tab .content {
-    background: #ccdef9;
+#bootbasics-container {
+    width:210px;
+    height: fit-content;
+    border: 1px solid gray;
+    background-color: whitesmoke;
+    border-radius:7px;
+    background-position: 100vh;
     overflow: hidden;
-    transition: max-height 0.3s;
-    max-height: 0;
-  }
-  .tab .content p { padding: 10px; }
-  
-  /* (E) OPEN TAB ON CHECKED */
-  .tab input:checked ~ .content { max-height: 100vh; }
-  
-  /* (F) EXTRA - ADD ARROW INDICATOR */
-  .tab label::after {
-    /* (F1) RIGHT ARROW */
-    display: block;  
-    content: "\25b6";
-   
-    /* (F2) PLACE AT RIGHT SIDE */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left:20px;
+    margin-top: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+
+#bootbasics {
+    margin-left: 30px;
+    border:none;
+    border-radius:5px;
+    background-color: #0d6efe;
+    color: white;
+    height:45px;
+    width: 150px;
     position: absolute;
-    right: 10px; top: 10px;
-   
-    /* (F3) ANIMATED ARROW */
-    transition: all 0.4s;
-  }
-   
-  /* (F4) ROTATE ARROW ON CHECKED */
-  .tab input:checked ~ label::after { transform: rotate(90deg); }
+    z-index: 10;
+    margin-top: 9px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#bootbasics:hover {
+    cursor: pointer;
+    background-color: #0c60dd;
+}
+
+#bootbasics-container a button {
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.boot-div {
+    height: 65px;
+    width: 100%;
+    overflow:hidden;
+    background-size: cover;
+    padding-bottom: 5px;
+    border-bottom: 2px solid gray; 
+    background-color: black;
+}
+
+.boot-div img {
+    width: 100%;
+    translate: 0 -110px;
+    z-index: 9;
+    opacity: .6;
+}
